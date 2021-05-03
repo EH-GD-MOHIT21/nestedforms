@@ -36,8 +36,8 @@ def mailer(to,otp):
         server.login(sender_mail, password_sender)
         server.send_message(message)
         return JsonResponse({'result':'Success'})
-    except:
-        return JsonResponse({'result':'Failure'})
+    except Exception as e:
+        return JsonResponse({'result': e})
 
 @csrf_exempt
 def otpgen(request):
