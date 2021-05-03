@@ -70,7 +70,7 @@ def checkuser(request=None,name=None,email=None,password=None,cpass=None,phoneno
     cur_min = datetime.strptime(str(cur_min), '%Y-%m-%d %H:%M:%S.%f')
     timegap = str(cur_min2-cur_min)
     times = timegap.split(':')
-    if int(times[0])!=0 or int(times[1])>1:
+    if int(times[0])!=0 or int(times[1])>5:
         otp_ = randrange(100000,999999)
         return render(request,'confirm.html',{'message':'Time limit Exeeced Session Expire please retry.'})
 
