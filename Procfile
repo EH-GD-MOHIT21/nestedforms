@@ -1,0 +1,1 @@
+web: gunicorn gform.wsgi --log-file -

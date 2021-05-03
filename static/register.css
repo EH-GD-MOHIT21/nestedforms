@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F8EDED;
+}
+
+.parentdiv {
+    display: block;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    background: #d1c4e9;
+    margin-top: 6%;
+    padding-bottom: 20px;
+}
+
+input {
+    width: 80%;
+    outline: none;
+    height: 35px;
+    margin: 15px auto;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    margin: auto;
+    padding: 8px;
+}
+
+.parentdiv .btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parentdiv .btns a {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid gray;
+    padding-top: 8px;
+    color: black;
+}
+
+#signup {
+    pointer-events: none;
+    background: rgba(105, 105, 105, 0.6);
+}
+
+button {
+    display: block;
+    margin: auto;
+    padding: 8px;
+}
+
+.parentdiv .btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    margin-right: 10px;
+}
+
+.child-div {
+    display: flex;
+}
+
+input {
+    display: flex;
+    justify-content: right;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+label {
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.footerid {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+@media (max-width:1200px) {
+    .parentdiv {
+        width: 50%;
+    }
+}
+
+@media (max-width:1000px) {
+    .parentdiv {
+        width: 65%;
+    }
+}
+
+@media (max-width:800px) {
+    .parentdiv {
+        width: 80%;
+    }
+}
+
+@media (max-width:600px) {
+    .parentdiv {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media(max-width:500px) {
+    input {
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .child-div {
+        display: block;
+    }
+    #otpgen {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    #Proceed {
+        margin-top: 10px;
+    }
+}

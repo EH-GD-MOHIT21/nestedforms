@@ -1,0 +1,157 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login @ Nested Forms</title>
+
+    <script src="https://kit.fontawesome.com/e8425439af.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #F8EDED;
+        }
+        
+        .container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: #d1c4e9;
+            width: 35%;
+        }
+        
+        .footerid {
+            position: fixed;
+            top: 95%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        input {
+            width: 90%;
+            outline: none;
+            font-size: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            height: 40px;
+            padding-left: 35px;
+        }
+        
+        .container form button {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .personal {
+            position: absolute;
+            padding-left: 10px;
+            padding-top: 27px;
+        }
+        
+        .container .btns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .container .btns a {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            border: 2px solid gray;
+            padding-top: 8px;
+            color: black;
+        }
+        
+        #login {
+            pointer-events: none;
+            background: rgba(105, 105, 105, 0.6);
+        }
+        
+        .container h2 {
+            margin: 10px auto;
+        }
+        
+        @media (max-width:1200px) {
+            .container {
+                width: 45%;
+            }
+        }
+        
+        @media (max-width:1000px) {
+            .container {
+                width: 58%;
+            }
+        }
+        
+        @media (max-width:800px) {
+            .container {
+                width: 70%;
+            }
+        }
+        
+        @media (max-width:600px) {
+            .container {
+                width: 90%;
+            }
+            input {
+                font-size: 18px;
+                padding-left: 40px;
+            }
+        }
+        
+        @media(max-width: 500px) {
+            .container {
+                width: 99%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="btns">
+            <a href="/login" id="login">Login</a>
+            <a href="/register">SignUp</a>
+        </div>
+        <h2>Nested Forms</h2>
+
+        <form action="/login/verify" method="POST">
+            {% csrf_token %}
+            <i class="fas fa-user personal" style="font-size:24px"></i>
+            <input type="text" name="user" required>
+            <br>
+            <i class="fas fa-lock inputlogo personal" style='font-size:24px'></i>
+            <input type="password" name="pass" required>
+            <button type="submit" style="cursor: pointer;">Login</button>
+        </form>
+
+    </div>
+
+    <div class="footerid">
+        <footer>Copyright &copy; 2021 | NestedForms.com</footer>
+    </div>
+
+</body>
+
+
+
+</html>

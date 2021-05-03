@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register @ Nested Forms</title>
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="parentdiv">
+        <div class="btns">
+            <a href="/login">Login</a>
+            <a href="/register" id="signup">SignUp</a>
+        </div>
+
+        <h2>Nested Forms</h2>
+
+        <form action="/verify/register" method="POST">
+            {% csrf_token %}
+            <div class="child-div"><label for="">Full Name: </label><input type="text" name="name" required></div>
+            <div class="child-div"><label for="">Mail id: </label><input type="text" id="email" name="email" required></div>
+            <button type="button" id="otpgen" style="cursor: pointer;">Generate OTP</button>
+            <div class="child-div"><label for="">Password: </label><input type="text" name="password" required></div>
+            <div class="child-div"><label for="">Re Pass: </label><input type="text" name="cpassword" required></div>
+            <div class="child-div"><label for="">Phone no: </label><input type="text" name="phoneno" required></div>
+            <div class="child-div"><label for="">Age: </label><input type="text" name="age" required></div>
+            <div class="child-div"><label for="">OTP: </label><input type="text" name="otp" required></div>
+            <button type="submit" id="Proceed" style="cursor: pointer;">Proceed</button>
+        </form>
+    </div>
+
+    <div class="footerid">
+        <footer>Copyright &copy; 2021 | NestedForms.com</footer>
+    </div>
+</body>
+<script src="{% static 'void.js' %}"></script>
+
+</html>

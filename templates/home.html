@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page | Nested Forms</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,800;1,400;1,700&amp;display=swap" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw==" crossorigin="anonymous"></script>
+    <style>
+        .parent {
+            background-image: url("{% static 'formimgs/main.jpg' %}");
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <h1>Nested</h1>
+                </div>
+                <div class="openMenu"><i class="fa fa-bars"></i></div>
+                <ul class="mainMenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/createform">Create</a></li>
+                    <li><a href="/fillform">fill</a></li>
+                    <li><a href="/register" class="last_ico">Signup</a></li>
+                    <div class="closeMenu"><i class="fa fa-times"></i></div>
+                    <span class="icons">
+                        <a href="https://www.facebook.com/profile.php?id=100004779451804" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/hks74123/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UC41ksagdFtAUKfSsNzGubhA" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://github.com/EH-GD-MOHIT21" target="_blank"><i class="fab fa-github"></i></a>
+                    </span>
+                </ul>
+            </nav>
+        </div>
+        <div class="mainbody">
+            <h1>Welcome to <span id="typing1"></span></h1>
+            <h4>A Form Designed <span id="typing2"></span></h4>
+        </div>
+
+    </div>
+
+    <div class="mainheading">
+        <h1>FAQS</h1>
+    </div>
+    <div class="faq-container">
+        <div class="faq active">
+            <h3 class="faq-tittle">How "Fill" Feature Works?</h3>
+            <p class="faq-text">Click on Fill In navbar It will Redirect you to login Page If You have Credentials Please Login or just create New by clicking on signup. Once you login It will Redirect You to Page where you have to provide FUC or Form Unique Code Provided
+                in link while creating new Form (Don't Copy Paste the whole link rather provide only FUC.) FUC should be like https://domain/fillform/FUC</p>
+            <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+        </div>
+        <div class="faq">
+            <h3 class="faq-tittle">How to create a Form?</h3>
+            <p class="faq-text">Well This is pretty simple No Need to signup/login for this Now. Just Click on create on home page and it will redirect you to page where you can create as much form as you want. Since You'll receive all the responses on your creator's mail
+                please provide realstic data for now. I am currently working on to make a authentication page before going to create form page.</p>
+            <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+        </div>
+
+        <div class="faq">
+            <h3 class="faq-tittle">Any Other Ways to a fill form?</h3>
+            <p class="faq-text">Hmmm Ya that's too boring just to copy FUC and paste in input box. Rather than I've made a custom link option so that just click on a link and fill the form simple enough Right? You'll get a custom link once you create a form.</p>
+            <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+        </div>
+
+        <div class="faq">
+            <h3 class="faq-tittle">I want to contribute in this Form.</h3>
+            <p class="faq-text">Ya I'm waiting for someone to join 😂😂😂 because doing all the stuff alone is too complecated also managing django apps, database and templates is a hard challenge for me. If anyone intrested please contact @ 19bcs053@smvdu.ac.in</p>
+            <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+        </div>
+
+        <div class="faq">
+            <h3 class="faq-tittle">Any other Features to include?</h3>
+            <p class="faq-text">Hm well First of all I know design for many pages are not so good will try to solve this. And want to create a Response page in which user can show which responses he filled up.</p>
+            <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+        </div>
+
+
+        <footer>
+            Designed By Mohit Satija | Copyright &copy; 2021 All Rights Reserved
+        </footer>
+
+</body>
+<script>
+    var toggles = document.querySelectorAll(".faq-toggle");
+    toggles.forEach((toggle) => {
+        toggle.addEventListener("click", function() {
+            toggle.parentNode.classList.toggle("active");
+        });
+    });
+</script>
+<script src="{% static 'navbar.js' %}"></script>
+
+</html>

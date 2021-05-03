@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation page @ Nested Forms</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 20px auto;
+            padding-top: 10px;
+        }
+        
+        button {
+            margin: 20px auto;
+            padding: 5px;
+            cursor: pointer;
+            display: block;
+        }
+        
+        label {
+            display: block;
+            margin: 10px auto;
+        }
+        
+        form {
+            display: block;
+            width: 40%;
+            margin: 12% auto;
+            background: #d1c4e9;
+            padding-bottom: 5px;
+            border-radius: 7px;
+        }
+        
+        a {
+            margin: 10px auto;
+            display: block;
+        }
+        
+        textarea {
+            resize: none;
+        }
+        
+        @media (max-width:600px) {
+            form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    {% if message %}
+    <h1>{{ message }} </h1>{% elif special %}
+    <style>
+        body {
+            background-image: url("{% static 'formimgs/temp.jpg' %}");
+        }
+    </style>
+    <form action="/getformbyid" method="POST">
+        <h1>Nested Forms</h1>
+        <label>Enter Your Form Id: </label><textarea name="formtoken" id="" cols="30" rows="10"></textarea>
+        <a href="/">Go to home</a>
+        <button type="submit">Request Form</button>
+    </form>
+    {% else %}
+    <h1>success</h1>
+    {% endif %} {% if extlink %}
+    <a href="/login">click here to login</a> {% endif %}
+    <footer style="color: white;margin-bottom: 5px;">
+        Copyright &copy; 2021 | NestedForms.com
+    </footer>
+</body>
+
+</html>
