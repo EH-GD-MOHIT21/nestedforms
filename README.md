@@ -28,6 +28,6 @@
 
 <img src="rdf/mohit10.png">
 
-<h1>Due to database somethime it's possible to delay in load resources. Please Wait for Some time if it occurs.</h1>
+<h1>Due to database sometime it's possible to delay in load resources. Please Wait for few moments or try again.</h1>
 
 CopyRight &copy; 2021 <a href="https://nestedform.herokuapp.com/">NestedForms.com</a>
