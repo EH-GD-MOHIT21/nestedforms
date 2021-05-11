@@ -1,4 +1,5 @@
 # nestedforms
+<h2><a href="https://nestedform.herokuapp.com/">click here to see NestedForms</a></h2>
 
 <h3>Home Page</h3>
 <img src="rdf/mohit.png">
@@ -15,7 +16,7 @@
 
 <img src="rdf/mohit6.png">
 
-<h3>Confirmation Page <span style="color:red;">Design Pending</span></h3>
+<h3>Confirmation Page (Design Pending)</h3>
 <img src="rdf/mohit7.png">
 
 <h3>FUC url contain Unique 81 charactes</h3>
