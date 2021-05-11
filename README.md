@@ -3,9 +3,6 @@
 <img src="rdf/mohit.png">
 
 
-<img src="rdf/mohit1.png">
-
-
 <img src="rdf/mohit2.png">
 
 
