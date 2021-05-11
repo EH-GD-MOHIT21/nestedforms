@@ -15,10 +15,10 @@
 
 <img src="rdf/mohit6.png">
 
-
+<h3>Confirmation Page <span style="color:red;">Design Pending</span></h3>
 <img src="rdf/mohit7.png">
 
-
+<h3>FUC url contain Unique 81 charactes</h3>
 <img src="rdf/mohit8.png">
 
 
