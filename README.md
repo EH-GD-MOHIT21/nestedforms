@@ -1,4 +1,7 @@
 # nestedforms
+
+# DUE TO DATABASE ISSUE CURRENTLY FILLFORM/CREATEFORM FEATURES ARE NOT WORKING I'M WORKING ON TO SWITCH DB IT'LL BE PATCHED SOON.
+
 <h2><a href="https://nestedform.herokuapp.com/">click here to see NestedForms</a></h2>
 
 <h3>Home Page</h3>
