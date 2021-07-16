@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .logo {
+    color: purple;
+    padding: 15px;
+}
+
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: purple;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+nav .mainMenu li a:hover {
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+nav .mainMenu .mainMenu li a:hover {
+    box-shadow: none;
+}
+
+nav .openMenu {
+    font-size: 2rem;
+    margin: 40px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu,
+.icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.fa-facebook,
+.fa-youtube,
+.fa-instagram,
+.fa-github {
+    color: purple;
+}
+
+.fa-facebook:hover {
+    color: rgb(0, 110, 255);
+}
+
+.fa-youtube:hover {
+    color: rgb(196, 48, 43);
+}
+
+.fa-instagram:hover {
+    color: rgb(255, 0, 191);
+}
+
+.fa-github:hover {
+    color: rgb(255, 123, 0);
+}
+
+nav .logo {
+    margin: 6px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.last_ico {
+    margin-right: 20px;
+}
+
+.mainbody h1,
+.mainbody h4 {
+    color: white;
+}
+
+#typing1 {
+    color: yellow;
+}
+
+#typing2 {
+    color: yellow;
+}
+
+.mainbody h4 {
+    margin-left: 40px;
+}
+
+.mainbody h4 span {
+    text-align: center;
+}
+
+.mainbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 250px;
+    text-align: center;
+}
+
+.faqs {
+    display: block;
+    width: 70%;
+    margin: 50px auto;
+}
+
+.faqs p {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+*::selection {
+    background: yellow;
+}
+
+.faqs h3 {
+    text-align: justify;
+}
+
+.mainheading {
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#first-faq {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* faq section */
+
+.faq-container {
+    max-width: 80%;
+    margin: auto;
+}
+
+.faq {
+    background-color: transparent;
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.faq.active {
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-tittle {
+    margin: 0 35px 0 0;
+}
+
+.faq-text {
+    display: none;
+    margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+    display: block;
+}
+
+.faq-toggle {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 16px;
+    padding: 0%;
+    height: 30px;
+    width: 30px;
+}
+
+.faq-toggle .fa-times {
+    display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+    color: #fff;
+    display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+}
+
+.faq.active .faq-toggle {
+    background-color: #9fa4a8;
+    border-radius: 50%;
+}
+
+
+/*----------------------------------Media query starts here.----------------------------------------*/
+
+@media(max-width: 800px) {
+    nav .logo {
+        padding-top: 26px;
+    }
+    nav .mainMenu li a {
+        color: white;
+    }
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.5);
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    nav .openMenu {
+        display: block;
+    }
+    nav .mainMenu li a:hover {
+        background: none;
+        color: white;
+        font-size: 1.6rem;
+    }
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 450px) {
+    .mainbody h1 {
+        font-size: 20px;
+    }
+    .mainbody h4 {
+        font-size: 14px;
+    }
+}

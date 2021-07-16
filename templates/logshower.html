@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Shower @ Nested Forms</title>
+    <style>
+        h3,
+        h1 {
+            text-align: center;
+        }
+        
+        body {
+            background: #777474;
+        }
+        
+        a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>You can access form using your form id and can share with your friends to fill this out...</h3>
+    {% if message %}
+    <h1>Your form id is:-
+        <a href="/fillform/{{formid}}">click here to see your form</a>
+    </h1>
+    {% else %} {{formid}} {% endif %}
+
+</body>
+
+</html>
