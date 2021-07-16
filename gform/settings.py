@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-y8^-=sykwrl#8h(fu#d3dtg_(2$z@ips1&9lnl@%(q3_vndxbc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','nestedform.herokuapp.com']
 
@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'gform.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'googleformdata',
+        'HOST': 'db4free.net',
+        'PORT': '3306',
+        'USER': 'googleform21',
+        'PASSWORD': 'hemantsharma',
     }
 }
 
