@@ -1,4 +1,4 @@
-# nestedforms
+# nestedforms(prefer nfv2.0 branch)
 
 <h2><a href="https://nestedform.herokuapp.com/">click here to see NestedForms</a></h2>
 
