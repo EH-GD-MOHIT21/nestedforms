@@ -84,17 +84,27 @@ WSGI_APPLICATION = 'gform.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'googleformdata',
+#         'HOST': 'db4free.net',
+#         'PORT': '3306',
+#         'USER': 'googleform21',
+#         'PASSWORD': 'hemantsharma',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'googleformdata',
-        'HOST': 'db4free.net',
-        'PORT': '3306',
-        'USER': 'googleform21',
-        'PASSWORD': 'hemantsharma',
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd3n5si4882fqia',			
+        'USER': 'telfckkjqcwpga',			
+        'PASSWORD': 'd2ead6b7e0dd9ed467bfff509c1307107ade6067cfaf54ae3d77f096d1dada7d',				
+        'HOST': 'ec2-3-214-136-47.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
