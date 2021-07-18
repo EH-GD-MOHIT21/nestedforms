@@ -24,9 +24,13 @@
 
 <img src="rdf/mohit10.png">
 
+
+# Fixed Issues
 <h1>Due to database sometime it's possible to delay in load resources. Please Wait for few moments or try again.</h1>
 
-CopyRight &copy; 2021 <a href="https://nestedform.herokuapp.com/">NestedForms.com</a>
+
+# Current Issues
+<h3>Google Recaptcha Problem for sending mails using smtp.</h3>
 
 
 # **New**
@@ -34,3 +38,5 @@ CopyRight &copy; 2021 <a href="https://nestedform.herokuapp.com/">NestedForms.co
 <h3>Login/signup Page Updated</h3>
 
 <h3>Added UserAccessPage to keep track of created forms and their responses.(Login Required)</h3>
+
+CopyRight &copy; 2021 <a href="https://nestedform.herokuapp.com/">NestedForms.com</a>
