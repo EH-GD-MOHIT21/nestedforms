@@ -12,12 +12,7 @@
 
 <img src="rdf/mohit4.png">
 
-<h3>Login/signup Page</h3>
-<img src="rdf/mohit5.png">
-
-<img src="rdf/mohit6.png">
-
-<h3>Confirmation Page (Design Pending)</h3>
+<h3>Confirmation Page</h3>
 <img src="rdf/mohit7.png">
 
 <h3>FUC url contain Unique 81 charactes</h3>
@@ -32,3 +27,10 @@
 <h1>Due to database sometime it's possible to delay in load resources. Please Wait for few moments or try again.</h1>
 
 CopyRight &copy; 2021 <a href="https://nestedform.herokuapp.com/">NestedForms.com</a>
+
+
+# **New**
+
+<h3>Login/signup Page Updated</h3>
+
+<h3>Added UserAccessPage to keep track of created forms and their responses.(Login Required)</h3>
