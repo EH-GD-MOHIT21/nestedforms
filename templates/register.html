@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register @ Nested Forms</title>
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="btns">
+            <a href="/login">Login</a>
+            <a href="/register" id="signup">SignUp</a>
+        </div>
+
+        <div class="cont1">
+
+            <h2 style="text-align: center;margin: 10px auto;">Nested Forms</h2>
+
+            <form action="/verify/register" method="POST">
+                {% csrf_token %}
+                <div class="child-div"><label for="">Full Name: </label><input type="text" name="name" required></div>
+                <div class="child-div"><label for="">Mail id: </label><input type="email" id="email" name="email" required></div>
+                <div class="btncntr" style="text-align: center;">
+                    <button type="button" id="otpgen" style="cursor: pointer;">Generate OTP</button>
+                </div>
+                <div class="child-div"><label for="">Password: </label><input type="password" name="password" required></div>
+                <div class="child-div"><label for="">Re Pass: </label><input type="password" name="cpassword" required></div>
+                <div class="child-div"><label for="">Phone no: </label><input type="number" name="phoneno" required></div>
+                <div class="child-div"><label for="">Age: </label><input type="number" name="age" required></div>
+                <div class="child-div"><label for="">OTP: </label><input type="number" name="otp" required></div>
+                <div class="btnmc" style="display: flex;justify-content: space-between;">
+                    <a id="hmegt" href="/" style="display: block;padding: 12px 20px;margin: 10px 0px;">Go to Home</a>
+                    <button type="submit" id="Proceed" style="cursor: pointer;">Proceed</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footerid">
+        <footer>Copyright &copy; 2021 | NestedForms.com</footer>
+    </div>
+</body>
+<script src="{% static 'void.js' %}"></script>
+
+</html>

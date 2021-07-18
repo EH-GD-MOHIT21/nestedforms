@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input[type="text"],
+textarea {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid gray;
+}
+
+body {
+    background: #d1c4e9;
+}
+
+form .container {
+    padding-top: 10px;
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding-bottom: 10px;
+    background: white;
+    border-left: 5px solid #4285f4;
+    border-radius: 8px;
+}
+
+form .container-headings {
+    padding-top: 10px;
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding-bottom: 10px;
+    border-top: 10px solid #00bcd4;
+    background: white;
+    border-radius: 10px;
+}
+
+form .container-headings p {
+    text-align: justify;
+    padding: 10px;
+    font-size: 17px;
+}
+
+form .container input,
+form .container textarea,
+form .question-prototype textarea {
+    width: 95%;
+    margin: 10px auto;
+    height: 40px;
+    outline: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+form .container textarea,
+form .question-prototype textarea {
+    padding: 7px;
+    display: block;
+    overflow: hidden;
+    resize: none;
+}
+
+#content-minusbutton {
+    display: none;
+}
+
+.question-prototype {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    background: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 5px solid #4285f4;
+    border-radius: 8px;
+}
+
+.question-prototype .option-box {
+    margin: 10px 0px;
+    padding-left: 5px;
+}
+
+.question-prototype .main-icoinput {
+    padding-left: 10px;
+}
+
+.question-prototype .main-icoinput .fa-circle {
+    padding-right: 4px;
+}
+
+
+/* btn design */
+
+.btnsholder {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+#content-adderbutton,
+#content-minusbutton {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.fa-minus-circle {
+    font-size: 20px;
+    margin-top: 9px;
+}
+
+#content-minusbutton {
+    display: none;
+}
+
+.fa-plus-circle {
+    font-size: 20px;
+}
+
+.mainbutton {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #5f27cd;
+    color: white;
+    font-size: 16px;
+    border-radius: 7px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*Footer tag*/
+
+#footer-tag {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+@media(max-width:1200px) {
+    /* 60 %*/
+    form .container,
+    form .container-headings,
+    .question-prototype,
+    .btnsholder {
+        width: 60%;
+    }
+}
+
+@media(max-width:900px) {
+    form .container,
+    form .container-headings,
+    .question-prototype,
+    .btnsholder {
+        width: 70%;
+    }
+}
+
+@media(max-width:650px) {
+    form .container,
+    form .container-headings,
+    .question-prototype,
+    .btnsholder {
+        width: 80%;
+    }
+    .container input[type="text"],
+    #Form-title,
+    #Form-Desc,
+    form .question-prototype textarea,
+    form .container-headings p {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:550px) {
+    form .container,
+    form .container-headings,
+    .question-prototype,
+    .btnsholder {
+        width: 95%;
+    }
+    #footer-tag {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:327px) {
+    .mainbutton {
+        padding: 5px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+}
+
+body {
+    font-family: sans-serif;
+}

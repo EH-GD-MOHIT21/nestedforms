@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Out Form | NestedForms.com</title>
+    <link rel="stylesheet" href="{% static 'quiz.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="form-details">
+        <h2>{{title}}</h2>
+        <p>{{desc}}</p>
+    </div>
+
+
+    <form method="POST" action="/saveresponse/{{formid}}">
+        {% csrf_token %}
+        <div class="parentelement">
+            <div class="container inputcontainer">
+                <input type="text" name="name" required placeholder="Enter Your Full Name">
+                <input type="text" name="mail" required placeholder="Enter Your email address" value={{user.username}} disabled>
+                <input type="text" name="phone" required placeholder="Enter Your Phone Number">
+                <input type="text" name="address" required placeholder="Enter Your Full Address">
+            </div>
+        </div>
+
+        {% for i,j,k,l,m in content.mainlist %}
+        <div class="parentelement">
+            <div class="container">
+                <h3>{{i}}</h3>
+                <div class="radio-container">
+                    <input name="{{ forloop.counter0 }}" type="radio" name="radio-value-1" value="{{j}}" id="0-{{ forloop.counter0 }}">
+                    <label for="0-{{ forloop.counter0 }}">{{j}}</label><br>
+                    <input name="{{ forloop.counter0 }}" type="radio" name="radio-value-1" value="{{k}}" id="1-{{ forloop.counter0 }}">
+                    <label for="1-{{ forloop.counter0 }}">{{k}}</label><br>
+                    <input name="{{ forloop.counter0 }}" type="radio" name="radio-value-1" value="{{l}}" id="2-{{ forloop.counter0 }}">
+                    <label for="2-{{ forloop.counter0 }}">{{l}}</label><br>
+                    <input name="{{ forloop.counter0 }}" type="radio" name="radio-value-1" value="{{m}}" id="3-{{ forloop.counter0 }}">
+                    <label for="3-{{ forloop.counter0 }}">{{m}}</label><br>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <button type="submit">Submit</button>
+        <div class="author-details">
+            <h3>Created by <span id="person-name">{{creator}}</span></h3>
+            <p>Mail id: <span id="person-mail">{{mail}}</span></p>
+        </div>
+        </div>
+
+    </form>
+
+    <footer id="footer-tag">Developed By Mohit Satija | Copyright &copy; 2021 All Rights Reserved</footer>
+
+</body>
+
+</html>

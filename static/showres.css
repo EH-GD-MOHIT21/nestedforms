@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #d1c4e9;
+}
+
+.container {
+    width: 600px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.form-details {
+    border-top: 10px solid #00bcd4;
+    background: white;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+
+.form-details p {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.form-details h2 {
+    padding-top: 10px;
+}
+
+.userdetails,
+.questioncontainer {
+    margin: 10px auto;
+    border-left: 5px solid #4285f4;
+    border-radius: 8px;
+    background: white;
+    padding-top: 6px;
+}
+
+.userdetails {
+    padding: 10px;
+}
+
+.userdetails p {
+    margin: 10px auto;
+    text-align: justify;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.questioncontainer {
+    margin: 15px auto;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.questioncontainer h2 {
+    text-align: center;
+    padding-left: 10px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.questioncontainer p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    text-align: justify;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.footercontent {
+    margin-right: 20px;
+    text-align: right;
+}
+
+.footer {
+    margin: 20px auto;
+}
+
+@media(max-width:600px) {
+    .container {
+        width: 98%;
+    }
+    .footer {
+        font-size: 14px;
+    }
+    .footercontent {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:400px) {
+    .footercontent {
+        font-size: 13px;
+        margin-right: 5px;
+    }
+}

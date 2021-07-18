@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #d1c4e9;
+}
+
+form,
+.form-details {
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+
+.form-details {
+    border-top: 10px solid #00bcd4;
+    background: white;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+
+.container {
+    display: block;
+    width: 95%;
+    margin: 15px auto;
+    border-radius: 10px;
+    padding-bottom: 5px;
+}
+
+.container h3 {
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    padding: 8px 20px;
+    cursor: pointer;
+    background: #5f27cd;
+    color: white;
+    font-size: 16px;
+    border-radius: 7px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.parentelement {
+    border-left: 5px solid #4285f4;
+    border-radius: 8px;
+    background: white;
+    padding-top: 6px;
+}
+
+.author-details {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#person-name {
+    color: #4285f4;
+}
+
+#person-mail {
+    color: crimson;
+    font-weight: 600;
+}
+
+.form-details h2 {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.form-details p {
+    margin: 10px;
+    text-align: justify;
+    padding-bottom: 15px;
+    font-size: 16px;
+}
+
+.radio-container input[type="radio"] {
+    margin-bottom: 25px;
+}
+
+.radio-container label {
+    font-size: 18px;
+}
+
+.radio-container label:hover,
+.radio-container input[type="radio"]:hover {
+    cursor: pointer;
+}
+
+#footer-tag {
+    text-align: center;
+    font-size: 12px;
+    margin: 20px;
+}
+
+.parentelement .container input[type="text"] {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    margin: 10px auto;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.parentelement .container input[type="text"]:hover {
+    border-bottom: 3px solid purple;
+}
+
+.parentelement .inputcontainer {
+    padding-bottom: 20px;
+}
+
+.parentelement .container h3 {
+    text-align: justify;
+}
+
+.parentelement .container input[type="text"]::selection {
+    background: none;
+    color: #F09819;
+}
+
+@media(max-width:1200px) {
+    form,
+    .form-details {
+        width: 60%;
+    }
+}
+
+@media(max-width:900px) {
+    form,
+    .form-details {
+        width: 70%;
+    }
+}
+
+@media(max-width:650px) {
+    form,
+    .form-details {
+        width: 80%;
+    }
+}
+
+@media(max-width:550px) {
+    form,
+    .form-details {
+        width: 95%;
+    }
+    .parentelement .container input[type="text"] {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:300px) {
+    .author-details {
+        font-size: 14px;
+    }
+}
+
+body {
+    font-family: sans-serif;
+}

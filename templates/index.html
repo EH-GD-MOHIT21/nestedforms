@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create-Quiz | Assignments @ NestedForms.com</title>
+
+    <script src="https://kit.fontawesome.com/e8425439af.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+</head>
+
+<body>
+    <!-- <marquee behavior="" direction="left">Welcome User to NestedForms.com click on <i class="fas fa-plus-circle"></i> icon to add more Questions to your set and respectively click on <i class="fas fa-minus-circle"></i> icon to remove a Question.</marquee> -->
+    <form action="/savedetails" method="POST">
+        {% csrf_token %}
+        <div class="container-headings">
+            <h1>NestedForms</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam perferendis quam earum maiores perspiciatis labore placeat praesentium, totam vero fugiat voluptatibus minus pariatur enim sint voluptas quidem architecto esse! Est in corrupti
+                molestias exercitationem quaerat omnis libero asperiores accusantium aliquid?</p>
+        </div>
+
+        <div class="container">
+
+            <textarea name="formtitle" id="Form-title" required placeholder="Enter Form's Title Here"></textarea>
+
+            <input type="text" name="creatorname" required class="other-data" placeholder="Enter Creator's Name">
+
+            <input type="text" name="mail" class="other-data" required placeholder="Enter Creator's Mail Id" value={{user.username}} disabled>
+
+            <textarea name="formdesc" id="Form-Desc" required placeholder="Enter Form's Description"></textarea>
+
+        </div>
+
+
+        <div id="outer">
+            <div class="question-prototype">
+                <textarea name="question0" class="question-box" required placeholder="Enter Your Question Here"></textarea>
+                <!-- <input type="text" class="question-box" placeholder="Enter Your Question Here"> -->
+                <div class="main-icoinput"><i class="far fa-circle"></i><input required type="text" class="option-box" name="option10" placeholder="option A"></div>
+                <div class="main-icoinput"><i class="far fa-circle"></i><input type="text" class="option-box" name="option20" placeholder="option B"></div>
+                <div class="main-icoinput"><i class="far fa-circle"></i><input type="text" class="option-box" name="option30" placeholder="option C"></div>
+                <div class="main-icoinput"><i class="far fa-circle"></i><input type="text" class="option-box" name="option40" placeholder="option D"></div>
+            </div>
+        </div>
+
+
+        <div class="btnsholder">
+            <button type="button" id="content-adderbutton"><i class="fas fa-plus-circle"></i></button>
+            <button type="Submit" class="mainbutton">Generate Token</button>
+            <div class="logbutton"><span id="log-shower1" style="display: block;"></span>
+                <button type="button" id="content-minusbutton"><i class="fas fa-minus-circle buchad"></i></button>
+            </div>
+        </div>
+    </form>
+
+
+    <footer id="footer-tag">Developed By Mohit Satija &copy; 2021 | All Rights Reserved</footer>
+</body>
+<script src="{% static 'script.js' %}"></script>
+
+</html>

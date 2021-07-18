@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Responses @ NestedForms.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="{% static 'showres.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-details">
+            <h2>{{title}}</h2>
+            <p>{{desc}}</p>
+        </div>
+
+        <div class="userdetails">
+            <p>Name: {{username}}</p>
+            <p>Mail: {{mail}}</p>
+            <p>Phone: {{phone}}</p>
+            <p>Address: {{address}}</p>
+        </div>
+
+        {% for q,o1,o2,o3,o4,userfilled in data %}
+        <div class="questioncontainer">
+            <h2>{{q}}</h2>
+            {% if userfilled == o1 %}
+            <p style="color:green;font-size: 18px;"><i class="fa fa-circle" aria-hidden="true"></i> {{o1}}</p>
+            {% else %}
+            <p><i class="fa fa-circle-thin" aria-hidden="true"></i> {{o1}}</p>
+            {% endif %} {% if userfilled == o2 %}
+            <p style="color:green;font-size: 18px;"><i class="fa fa-circle" aria-hidden="true"></i> {{o2}}</p>
+            {% else %}
+            <p><i class="fa fa-circle-thin" aria-hidden="true"></i> {{o2}}</p>
+            {% endif %} {% if userfilled == o3 %}
+            <p style="color:green;font-size: 18px;"><i class="fa fa-circle" aria-hidden="true"></i> {{o3}}</p>
+            {% else %}
+            <p><i class="fa fa-circle-thin" aria-hidden="true"></i> {{o3}}</p>
+            {% endif %} {% if userfilled == o4 %}
+            <p style="color:green;font-size: 18px;"><i class="fa fa-circle" aria-hidden="true"></i> {{o4}}</p>
+            {% else %}
+            <p><i class="fa fa-circle-thin" aria-hidden="true"></i> {{o4}}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <div class="footercontent">
+            <h3>Created By: <span style="color:crimson">{{author}}</span></h3>
+            <p>contact: <span style="color:green;font-weight: bold;">{{contact}}</span></p>
+        </div>
+
+        <div class="footer">
+            Copyright &copy; 2021 NestedForms.com | Design Your Forms
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
